@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: garamond;
+    
+}
+
+.text {
+    text-align: center;
+    color: black;
+}
+
+.background {
+    background-color: white;
+}
+
+.ten_gorny_pasek {
+    text-align: center; 
+    font-size: 170%;
+    padding: 10px;
+    background-color:  #795548;
+    color: white;
+    text-decoration: underline;
+}
+
+.footer {
+    bottom: 1px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+
+	position: absolute;
+	background-color:#BCAAA4;
+}
+
+.ten_gorny_pasek2 {
+    color: azure;
+    font-size: 170%;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    margin: auto;
+}
+
+
+.boczny_pasek {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color:#BCAAA4;
+    color: #795548;
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+
+.fryzjerka {
+    display: block;
+    margin: 0 auto;
+    width: 650px;
+}
+
+.ten_boczny_pasek .ten_gorny_pasek .ten_gorny_pasek2 {
+    width: 72%;
+    
+}
+
+.fryzura {
+    display: block;
+    margin: 0 auto;
+    width: 400px; 
+    padding: 20px;
+}
+
