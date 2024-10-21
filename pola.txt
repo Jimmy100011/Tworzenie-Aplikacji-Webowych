@@ -1,0 +1,61 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static double PoleTrojkata(double a, double h)
+    {
+        return (a * h) / 2;
+    }
+    public static double PoleKwadratu(double a)
+    {
+        return a * a;
+    }
+    public static double PoleTrapezu(double a, double b, double h)
+    {
+        return ((a * b) * h) / 2;
+    }
+    public static double PoleRombu(double a, double h)
+    {
+        return a * h;
+    }
+    public static double PoleRownolegloboku(double a, double h)
+    {
+        return a * h;
+    }
+    public static double PoleSzesciokata(double a)
+    {
+        return (6 * Math.Sqrt(3) * a * a) / 4;
+    }
+    public static double PoleKola(double r)
+    {
+        return Math.PI * r * r;
+    }
+    public static double PoleWycinkaKolowego(double r, double alpha)
+    {
+        return (Math.PI * r * r * alpha) / 360;
+    }
+    public static double DlogoscOkregu(double r)
+    {
+        return 2 * Math.PI * r;
+    }
+    public static double DlogoscWycinkaOkregu(double r, double alpha)
+    {
+        return (2 * Math.PI * r * alpha) / 360;
+    }
+    public static void Main(String[] args)
+    {
+        Console.WriteLine("PoleTrojkata: " + PoleTrojkata(4, 5));
+        Console.WriteLine("PoleKwadratu: " + PoleKwadratu(6));
+        Console.WriteLine("PoleTrapezu: " + PoleTrapezu(2, 3, 4));
+        Console.WriteLine("PoleRombu: " + PoleRombu(5, 7));
+        Console.WriteLine("PoleRownolegloboku: " + PoleRownolegloboku(3, 4));
+        Console.WriteLine("PoleSzesciokata: " + PoleSzesciokata(5));
+        Console.WriteLine("PoleKola: " + PoleKola(5));
+        Console.WriteLine("PoleWycinkaKolowego: " + PoleWycinkaKolowego(5, 6));
+        Console.WriteLine("DlogoscOkregu: " + DlogoscOkregu(6));
+        Console.WriteLine("DlogoscWycinkaOkregu: " + DlogoscWycinkaOkregu(6, 8));
+    }
+}
