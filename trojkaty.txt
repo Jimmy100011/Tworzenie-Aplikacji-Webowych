@@ -1,0 +1,41 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine ("Wprowadz dlugosci bokow trojkata:");
+        Console.Write("a = ");
+        double a = Convert.ToDouble(Console.ReadLine());
+        Console.Write("b = ");
+        double b = Convert.ToDouble(Console.ReadLine());
+        Console.Write("c = ");
+        double c = Convert.ToDouble(Console.ReadLine());
+        
+        if(a + b > c)
+        {
+            if(a + c > b)
+            {
+                if(b + c > a)
+                {
+                    Console.WriteLine("Mozna utworzyc trojkat.");
+                }
+                else
+                {
+                    Console.WriteLine("Nie mozna utworzyc trojkata.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Nie mozna utworzyc trojkata.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Nie mozna utworzyc trojkata.");
+        }
+    }
+}
