@@ -1,0 +1,83 @@
+using System;
+
+public class Ciagi
+{
+    // 46. Oblicza podany wyraz ciągu arytmetycznego o podanym r i a1
+    public static double WyrazCiaguArytmetycznego(int n, double r, double a1)
+    {
+        return a1 + (n - 1) * r;
+    }
+
+    // 47. Oblicza sumę n pierwszych wyrazów ciągu arytmetycznego o podanym r i a1
+    public static double SumaCiaguArytmetycznego(int n, double r, double a1)
+    {
+        return (n / 2.0) * (2 * a1 + (n - 1) * r);
+    }
+
+    // 48. Oblicza sumę wyrazów od n do m ciągu arytmetycznego o podanym r i a1
+    public static double SumaCiaguArytmetycznego(int n, int m, double r, double a1)
+    {
+        double sumaDoM = SumaCiaguArytmetycznego(m, r, a1);
+        double sumaDoNMinus1 = SumaCiaguArytmetycznego(n - 1, r, a1);
+        return sumaDoM - sumaDoNMinus1;
+    }
+
+    // 49. Sprawdza czy 3 kolejne wyrazy tworzą ciąg arytmetyczny
+    public static bool CzyArytmetyczny(double a1, double a2, double a3)
+    {
+        return (a2 - a1) == (a3 - a2);
+    }
+
+    // 50. Oblicza podany wyraz ciągu geometrycznego o podanym q i a1
+    public static double WyrazCiaguGeometrycznego(int n, double q, double a1)
+    {
+        return a1 * Math.Pow(q, n - 1);
+    }
+
+    // 51. Oblicza sumę n pierwszych wyrazów ciągu geometrycznego o podanym q i a1
+    public static double SumaCiaguGeometrycznego(int n, double q, double a1)
+    {
+        if (q == 1)
+            return n * a1; // specjalny przypadek dla q = 1
+        return a1 * (1 - Math.Pow(q, n)) / (1 - q);
+    }
+
+    // 52. Oblicza sumę wyrazów od n do m ciągu geometrycznego o podanym q i a1
+    public static double SumaCiaguGeometrycznego(int n, int m, double q, double a1)
+    {
+        double sumaDoM = SumaCiaguGeometrycznego(m, q, a1);
+        double sumaDoNMinus1 = SumaCiaguGeometrycznego(n - 1, q, a1);
+        return sumaDoM - sumaDoNMinus1;
+    }
+
+    // 53. Sprawdza czy 3 kolejne wyrazy tworzą ciąg geometryczny
+    public static bool CzyGeometryczny(double a1, double a2, double a3)
+    {
+        return (a2 / a1) == (a3 / a2);
+    }
+
+    // Punkt wejścia programu
+    public static void Main(string[] args)
+    {
+        // Przykładowe użycie funkcji
+
+        // Ciąg arytmetyczny
+        double r = 2;
+        double a1 = 3;
+        int n = 5;
+        int m = 8;
+
+        Console.WriteLine($"Wyraz {n} ciągu arytmetycznego: {WyrazCiaguArytmetycznego(n, r, a1)}");
+        Console.WriteLine($"Suma {n} pierwszych wyrazów ciągu arytmetycznego: {SumaCiaguArytmetycznego(n, r, a1)}");
+        Console.WriteLine($"Suma wyrazów od {n} do {m} ciągu arytmetycznego: {SumaCiaguArytmetycznego(n, m, r, a1)}");
+        Console.WriteLine($"Czy {a1}, {a1 + r}, {a1 + 2 * r} tworzą ciąg arytmetyczny? {CzyArytmetyczny(a1, a1 + r, a1 + 2 * r)}");
+
+        // Ciąg geometryczny
+        double q = 3;
+
+        Console.WriteLine($"Wyraz {n} ciągu geometrycznego: {WyrazCiaguGeometrycznego(n, q, a1)}");
+        Console.WriteLine($"Suma {n} pierwszych wyrazów ciągu geometrycznego: {SumaCiaguGeometrycznego(n, q, a1)}");
+        Console.WriteLine($"Suma wyrazów od {n} do {m} ciągu geometrycznego: {SumaCiaguGeometrycznego(n, m, q, a1)}");
+        Console.WriteLine($"Czy {a1}, {a1 * q}, {a1 * q * q} tworzą ciąg geometryczny? {CzyGeometryczny(a1, a1 * q, a1 * q * q)}");
+    }
+}
